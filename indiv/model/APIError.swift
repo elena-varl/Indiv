@@ -13,7 +13,7 @@ enum APIError: Error,CustomStringConvertible {
     case badURL
     case urlSession(URLError?)
     case badResponse(Int)
-    case decoding(DecodingError)
+    case decoding(DecodingError?)
     case unknown
     
     var description: String{
@@ -39,7 +39,7 @@ enum APIError: Error,CustomStringConvertible {
         case .badResponse(_):
             return "something went wrong"
         case .decoding(let decodingError):
-            return decodingError.localizedDescription
+            return decodingError?.localizedDescription ?? "something went wrong"
        
         }
         }
