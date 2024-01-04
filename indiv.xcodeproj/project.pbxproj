@@ -19,6 +19,8 @@
 		454DF2DC2B4695E90085660A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454DF2DB2B4695E90085660A /* Song.swift */; };
 		454DF2DE2B4695F90085660A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454DF2DD2B4695F90085660A /* Movie.swift */; };
 		454DF2E02B469BD60085660A /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454DF2DF2B469BD60085660A /* AlbumListView.swift */; };
+		454DF2E22B46D5DE0085660A /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454DF2E12B46D5DE0085660A /* AlbumSearchView.swift */; };
+		454DF2E42B46E71D0085660A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454DF2E32B46E71C0085660A /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		454DF2DB2B4695E90085660A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		454DF2DD2B4695F90085660A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		454DF2DF2B469BD60085660A /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
+		454DF2E12B46D5DE0085660A /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
+		454DF2E32B46E71C0085660A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				454DF2DF2B469BD60085660A /* AlbumListView.swift */,
+				454DF2E12B46D5DE0085660A /* AlbumSearchView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				454DF2D72B46929D0085660A /* Album.swift */,
 				454DF2DB2B4695E90085660A /* Song.swift */,
 				454DF2DD2B4695F90085660A /* Movie.swift */,
+				454DF2E32B46E71C0085660A /* APIError.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -298,11 +304,13 @@
 			files = (
 				454DF2DA2B4693030085660A /* AlbumListViewModel.swift in Sources */,
 				454B7B512B3C2768008EC75F /* ContentView.swift in Sources */,
+				454DF2E22B46D5DE0085660A /* AlbumSearchView.swift in Sources */,
 				454DF2DE2B4695F90085660A /* Movie.swift in Sources */,
 				454B7B4F2B3C2768008EC75F /* indivApp.swift in Sources */,
 				454DF2D82B46929D0085660A /* Album.swift in Sources */,
 				454DF2DC2B4695E90085660A /* Song.swift in Sources */,
 				454DF2E02B469BD60085660A /* AlbumListView.swift in Sources */,
+				454DF2E42B46E71D0085660A /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

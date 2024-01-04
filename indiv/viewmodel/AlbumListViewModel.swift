@@ -20,10 +20,19 @@ class AlbumListViewModel : ObservableObject
         case loadedAll
         case error(String)
     }
+    enum EntityType: String {
+        case album
+        case song
+        case movie
+    }
     @Published var searchTerm: String = ""
     @Published var albums: [Album] = [Album]()
     
-    @Published var state: State = .good
+    @Published var state: State = .good {
+        didSet {
+            print("state change to: \(state)")
+        }
+    }
     
     let limit: Int = 20
     var page: Int = 0
@@ -54,11 +63,11 @@ class AlbumListViewModel : ObservableObject
         guard state == State.good else  {
             return
         }
-        let offset = page * limit
-        guard let url = URL(string: "https://itunes.apple.com/search?term=\(searchTerm)&entity=album&limit=\(limit)$offset=\(offset)") else {
+        
+        guard let url = createURL(for: searchTerm) else {
             return
         }
-        
+        print (url.absoluteString)
         print("start fetching data for \(searchTerm)")
         state = .isLoading
         
@@ -94,5 +103,21 @@ class AlbumListViewModel : ObservableObject
             
         }.resume()
     }
-    
+    func fetch<T>(type: T.Type, url: URL?, completion: @escaping (Result<T ,APIError>) -> Void)
+    {
+        
+    }
+    func createURL(for searchTerm: String, type: EntityType = .album) -> URL? {
+        //https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5&offset=10
+        let baseURL = "https://itunes.apple.com/search"
+        let offset = page * limit
+        let queryItems = [URLQueryItem(name: "term", value: searchTerm),
+                          URLQueryItem(name: "entity", value: type.rawValue),
+                          URLQueryItem(name: "limit", value: String(limit)),
+                          URLQueryItem(name: "offset", value: String(offset))]
+        
+        var components = URLComponents(string: baseURL)
+        components?.queryItems = queryItems
+        return components?.url
+    }
 }
