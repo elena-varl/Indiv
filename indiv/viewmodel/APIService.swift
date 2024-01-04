@@ -6,11 +6,7 @@
 //
 
 import Foundation
-enum EntityType: String {
-    case album
-    case song
-    case movie
-}
+
 class APIService
 {
     // поиск альбомов
@@ -35,6 +31,7 @@ class APIService
         
         fetch(type: MovieResult.self, url: url, completion: completion)
     }
+    //generic
     func fetch<T: Decodable>(type: T.Type, url: URL?, completion: @escaping (Result<T ,APIError>) -> Void)
     {
         guard let url = url else {
@@ -65,6 +62,7 @@ class APIService
         }.resume()
 
     }
+    //  формирование запроса
     func createURL(for searchTerm: String, type: EntityType  , page:Int?, limit:Int?) -> URL? {
     //https://itunes.apple.com/search?term=jack+johnson&entity=album&limit=5&offset=10
     let baseURL = "https://itunes.apple.com/search"

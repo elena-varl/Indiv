@@ -30,7 +30,7 @@ struct Movie: Codable, Identifiable {
     let trackTimeMillis: Int?
     let country, currency, primaryGenreName, contentAdvisoryRating: String
     let shortDescription: String?
-    let longDescription: String
+    let longDescription: String?
     let trackRentalPrice, collectionHDPrice, trackHDPrice, trackHDRentalPrice: Double?
     
     var id: Int {
