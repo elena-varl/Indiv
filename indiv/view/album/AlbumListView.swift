@@ -16,7 +16,8 @@ struct AlbumListView: View {
             List{
                 
             ForEach(viewModel.albums){
-            album in Text(album.collectionName)
+            album in
+                AlbumRowView(album: album)
             }
                 switch viewModel.state {
                 case .good:

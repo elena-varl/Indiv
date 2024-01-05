@@ -15,7 +15,8 @@ struct MovieListView: View {
             List{
                 
                 ForEach(viewModel.movies){
-                    movie in Text(movie.trackName)
+                    movie in
+                    MovieRowView(movie: movie)
             }
                 switch viewModel.state {
                 case .good:

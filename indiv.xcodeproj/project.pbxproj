@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452BAEC92B47F9F700E21A47 /* SongRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAEC82B47F9F700E21A47 /* SongRowView.swift */; };
+		452BAECC2B48001F00E21A47 /* BuyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAECB2B48001F00E21A47 /* BuyButtonStyle.swift */; };
+		452BAECE2B480AD400E21A47 /* AlbumRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAECD2B480AD400E21A47 /* AlbumRowView.swift */; };
+		452BAED12B480DB700E21A47 /* ImageLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAED02B480DB700E21A47 /* ImageLoadingView.swift */; };
+		452BAED32B480E1D00E21A47 /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAED22B480E1D00E21A47 /* BuyButton.swift */; };
+		452BAED52B4810FF00E21A47 /* MovieRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAED42B4810FF00E21A47 /* MovieRowView.swift */; };
+		452BAED72B48198000E21A47 /* SongSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAED62B48198000E21A47 /* SongSectionView.swift */; };
+		452BAED92B4819BC00E21A47 /* AlbumSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAED82B4819BC00E21A47 /* AlbumSectionView.swift */; };
+		452BAEDB2B4819DC00E21A47 /* MovieSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BAEDA2B4819DC00E21A47 /* MovieSectionView.swift */; };
 		454B7B4F2B3C2768008EC75F /* indivApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B7B4E2B3C2768008EC75F /* indivApp.swift */; };
 		454B7B512B3C2768008EC75F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454B7B502B3C2768008EC75F /* ContentView.swift */; };
 		454B7B532B3C276F008EC75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 454B7B522B3C276F008EC75F /* Assets.xcassets */; };
@@ -52,6 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		452BAEC82B47F9F700E21A47 /* SongRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongRowView.swift; sourceTree = "<group>"; };
+		452BAECB2B48001F00E21A47 /* BuyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButtonStyle.swift; sourceTree = "<group>"; };
+		452BAECD2B480AD400E21A47 /* AlbumRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRowView.swift; sourceTree = "<group>"; };
+		452BAED02B480DB700E21A47 /* ImageLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingView.swift; sourceTree = "<group>"; };
+		452BAED22B480E1D00E21A47 /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
+		452BAED42B4810FF00E21A47 /* MovieRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowView.swift; sourceTree = "<group>"; };
+		452BAED62B48198000E21A47 /* SongSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSectionView.swift; sourceTree = "<group>"; };
+		452BAED82B4819BC00E21A47 /* AlbumSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSectionView.swift; sourceTree = "<group>"; };
+		452BAEDA2B4819DC00E21A47 /* MovieSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSectionView.swift; sourceTree = "<group>"; };
 		454B7B4B2B3C2768008EC75F /* indiv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = indiv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		454B7B4E2B3C2768008EC75F /* indivApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = indivApp.swift; sourceTree = "<group>"; };
 		454B7B502B3C2768008EC75F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +125,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452BAECA2B47FFF900E21A47 /* styling */ = {
+			isa = PBXGroup;
+			children = (
+				452BAECB2B48001F00E21A47 /* BuyButtonStyle.swift */,
+			);
+			path = styling;
+			sourceTree = "<group>";
+		};
+		452BAECF2B480D8D00E21A47 /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				45E952472B474B8800AEE068 /* SearchPlaceholderView.swift */,
+				452BAED02B480DB700E21A47 /* ImageLoadingView.swift */,
+				452BAED22B480E1D00E21A47 /* BuyButton.swift */,
+			);
+			path = helper;
+			sourceTree = "<group>";
+		};
 		454B7B422B3C2768008EC75F = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +166,8 @@
 		454B7B4D2B3C2768008EC75F /* indiv */ = {
 			isa = PBXGroup;
 			children = (
+				452BAECA2B47FFF900E21A47 /* styling */,
+				452BAECF2B480D8D00E21A47 /* helper */,
 				454B7B4E2B3C2768008EC75F /* indivApp.swift */,
 				454B7B502B3C2768008EC75F /* ContentView.swift */,
 				454DF2D62B4692610085660A /* model */,
@@ -206,6 +244,8 @@
 			children = (
 				454DF2F02B470B480085660A /* MovieSearchListView.swift */,
 				454DF2F22B470C5D0085660A /* MovieListView.swift */,
+				452BAED42B4810FF00E21A47 /* MovieRowView.swift */,
+				452BAEDA2B4819DC00E21A47 /* MovieSectionView.swift */,
 			);
 			path = movie;
 			sourceTree = "<group>";
@@ -215,6 +255,8 @@
 			children = (
 				454DF2E12B46D5DE0085660A /* AlbumSearchView.swift */,
 				454DF2DF2B469BD60085660A /* AlbumListView.swift */,
+				452BAECD2B480AD400E21A47 /* AlbumRowView.swift */,
+				452BAED82B4819BC00E21A47 /* AlbumSectionView.swift */,
 			);
 			path = album;
 			sourceTree = "<group>";
@@ -223,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				45E952452B47446400AEE068 /* SongListView.swift */,
+				452BAEC82B47F9F700E21A47 /* SongRowView.swift */,
+				452BAED62B48198000E21A47 /* SongSectionView.swift */,
 			);
 			path = song;
 			sourceTree = "<group>";
@@ -232,7 +276,6 @@
 			children = (
 				45E9523F2B473BB900AEE068 /* SearchView.swift */,
 				45E952432B4741DC00AEE068 /* SearchAllListView.swift */,
-				45E952472B474B8800AEE068 /* SearchPlaceholderView.swift */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -367,10 +410,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452BAECC2B48001F00E21A47 /* BuyButtonStyle.swift in Sources */,
 				45E952442B4741DC00AEE068 /* SearchAllListView.swift in Sources */,
+				452BAED92B4819BC00E21A47 /* AlbumSectionView.swift in Sources */,
+				452BAED52B4810FF00E21A47 /* MovieRowView.swift in Sources */,
 				454DF2DA2B4693030085660A /* AlbumListViewModel.swift in Sources */,
+				452BAECE2B480AD400E21A47 /* AlbumRowView.swift in Sources */,
+				452BAED32B480E1D00E21A47 /* BuyButton.swift in Sources */,
 				454DF2F12B470B490085660A /* MovieSearchListView.swift in Sources */,
+				452BAED72B48198000E21A47 /* SongSectionView.swift in Sources */,
 				454DF2F32B470C5D0085660A /* MovieListView.swift in Sources */,
+				452BAEDB2B4819DC00E21A47 /* MovieSectionView.swift in Sources */,
 				454B7B512B3C2768008EC75F /* ContentView.swift in Sources */,
 				454DF2EA2B47051D0085660A /* FetchState.swift in Sources */,
 				45E952482B474B8800AEE068 /* SearchPlaceholderView.swift in Sources */,
@@ -379,12 +429,14 @@
 				454DF2E22B46D5DE0085660A /* AlbumSearchView.swift in Sources */,
 				454DF2DE2B4695F90085660A /* Movie.swift in Sources */,
 				45E952462B47446400AEE068 /* SongListView.swift in Sources */,
+				452BAEC92B47F9F700E21A47 /* SongRowView.swift in Sources */,
 				454B7B4F2B3C2768008EC75F /* indivApp.swift in Sources */,
 				454DF2EC2B4706E50085660A /* MovieListViewModel.swift in Sources */,
 				454DF2D82B46929D0085660A /* Album.swift in Sources */,
 				454DF2E62B46FDA60085660A /* APIService.swift in Sources */,
 				45E952402B473BB900AEE068 /* SearchView.swift in Sources */,
 				454DF2DC2B4695E90085660A /* Song.swift in Sources */,
+				452BAED12B480DB700E21A47 /* ImageLoadingView.swift in Sources */,
 				454DF2E02B469BD60085660A /* AlbumListView.swift in Sources */,
 				454DF2E42B46E71D0085660A /* APIError.swift in Sources */,
 			);
