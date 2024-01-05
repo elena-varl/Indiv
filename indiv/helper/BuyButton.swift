@@ -6,34 +6,49 @@
 //
 
 import SwiftUI
-
-    struct BuyButton: View {
-        let urlString: String
-        let price: Double?
-        let currency: String
-        var body: some View {
-            if let url = URL (string: urlString),
-                let priceText = formattedPrice() {
-                Link(destination: url)
-                {
-                    Text(priceText)
-                }
-                .buttonStyle(BuyButtonStyle())
-            }
-            
+struct BuySongButton: View {
+    let urlString: String
+    let price: Double?
+    let currency: String
+    var body: some View {
+        
+        if let price = price{
+            BuyButton(urlString: urlString, price: price, currency: currency)
         }
-        func formattedPrice() -> String? {
-            
-            guard let price = price else {
-                return nil
-            }
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currency
-            formatter.currencyCode = currency
-            let priceString = formatter.string(from: NSNumber(value: price))
-            return priceString ?? ""
+        else {
+            Text("It's only avaiable with the album")
+                .font(.footnote)
+                .foregroundColor(.gray)
         }
     }
+}
+struct BuyButton: View {
+    let urlString: String
+    let price: Double?
+    let currency: String
+    var body: some View {
+        if let url = URL (string: urlString),
+           let priceText = formattedPrice() {
+            Link(destination: url)
+            {
+                Text(priceText)
+            }
+            .buttonStyle(BuyButtonStyle())
+        }
+        
+    }
+    func formattedPrice() -> String? {
+        
+        guard let price = price else {
+            return nil
+        }
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = currency
+        let priceString = formatter.string(from: NSNumber(value: price))
+        return priceString ?? ""
+    }
+}
 
 
 

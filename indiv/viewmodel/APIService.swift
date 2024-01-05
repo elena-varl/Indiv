@@ -16,6 +16,12 @@ class APIService
         
         fetch(type: AlbumResult.self, url: url, completion: completion)
     }
+    // поиск песен, принадлежащих одному альбому
+    func fetchSongs(for albumID: Int, completion: @escaping (Result<SongResult ,APIError>) -> Void) {
+        let url = CreateURL(for: albumID, type: .song)
+        print(url?.absoluteString)
+        fetch(type: SongResult.self, url: url, completion: completion)
+    }
     // поиск песен
     func fetchSongs(searchTerm: String, page: Int, limit: Int, completion: @escaping (Result<SongResult ,APIError>) -> Void)
     {
@@ -81,4 +87,20 @@ class APIService
     components?.queryItems = queryItems
     return components?.url
 }
+    // поиск всех песен в альбоме
+    //https://itunes.apple.com/lookup?id=909253&entity=song
+    func CreateURL(for id: Int, type:EntityType)-> URL? {
+        
+        let baseURL = "https://itunes.apple.com/lookup"
+        
+        var queryItems = [URLQueryItem(name: "id", value: String(id)),
+                          URLQueryItem(name: "entity", value: type.rawValue)
+                          
+                          ]
+        
+        var components = URLComponents(string: baseURL)
+        components?.queryItems = queryItems
+        return components?.url
+        
+    }
 }

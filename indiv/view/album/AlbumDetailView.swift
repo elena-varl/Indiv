@@ -9,7 +9,16 @@ import SwiftUI
 
 struct AlbumDetailView: View {
     let album: Album
+    @StateObject var songsViewModel: SongsForAlbumListViewModel
+    
+    init(album: Album)
+    {
+        print("init album detail \(album.id)")
+        self.album = album
+        self._songsViewModel = StateObject(wrappedValue: SongsForAlbumListViewModel(albumID: album.id))
+    }
     var body: some View {
+        VStack{
         HStack (alignment: .bottom) {
             
             ImageLoadingView(urlString: album.artworkUrl60, size: 100)
@@ -34,6 +43,11 @@ struct AlbumDetailView: View {
             
         }
         .padding()
+        SongsForAlbumListView(songsViewModel: songsViewModel)
+    }
+        .onAppear(){
+            songsViewModel.fetch()
+        }
     }
     //  для правильного отображения даты из  json
     func formattedDate(value: String)->String {
